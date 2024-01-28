@@ -1,0 +1,315 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{BE753E5A-9D69-4637-8AB8-4AA51579FA06}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>GUI__Business_Project_Airport__Final</RootNamespace>
+    <AssemblyName>GUI %28Business Project Airport%29 Final</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="BouncyCastle.Crypto, Version=1.8.9.0, Culture=neutral, PublicKeyToken=0e99375e54769942">
+      <HintPath>packages\BouncyCastle.1.8.9\lib\BouncyCastle.Crypto.dll</HintPath>
+    </Reference>
+    <Reference Include="itextsharp, Version=5.5.13.3, Culture=neutral, PublicKeyToken=8354ae6d2174ddca, processorArchitecture=MSIL">
+      <HintPath>packages\iTextSharp.5.5.13.3\lib\itextsharp.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AdminInterface.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AdminInterface.Designer.cs">
+      <DependentUpon>AdminInterface.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BL\address_user.cs" />
+    <Compile Include="BL\Emirates.cs" />
+    <Compile Include="BL\Flight.cs" />
+    <Compile Include="BL\Luggage.cs" />
+    <Compile Include="BL\Passenger.cs" />
+    <Compile Include="BL\PIA.cs" />
+    <Compile Include="BL\Qatar.cs" />
+    <Compile Include="BL\SouthWest.cs" />
+    <Compile Include="BL\Thai.cs" />
+    <Compile Include="BL\User.cs" />
+    <Compile Include="DL\AddressDL.cs" />
+    <Compile Include="DL\FlightDL.cs" />
+    <Compile Include="DL\luggageDL.cs" />
+    <Compile Include="DL\PassengerDL.cs" />
+    <Compile Include="DL\UserDL.cs" />
+    <Compile Include="Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PassengerInterface.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PassengerInterface.Designer.cs">
+      <DependentUpon>PassengerInterface.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="UC_AddressInfo.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UC_AddressInfo.Designer.cs">
+      <DependentUpon>UC_AddressInfo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UC_adminInterface.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UC_adminInterface.Designer.cs">
+      <DependentUpon>UC_adminInterface.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UC_Booking.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UC_Booking.Designer.cs">
+      <DependentUpon>UC_Booking.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UC_FamilyMembers.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UC_FamilyMembers.Designer.cs">
+      <DependentUpon>UC_FamilyMembers.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UC_FeedBack.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UC_FeedBack.Designer.cs">
+      <DependentUpon>UC_FeedBack.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UC_FeedbackView.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UC_FeedbackView.Designer.cs">
+      <DependentUpon>UC_FeedbackView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UC_FlightsAdd.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UC_FlightsAdd.Designer.cs">
+      <DependentUpon>UC_FlightsAdd.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UC_FlightsCRUD.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UC_FlightsCRUD.Designer.cs">
+      <DependentUpon>UC_FlightsCRUD.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UC_FlightSelect.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UC_FlightSelect.Designer.cs">
+      <DependentUpon>UC_FlightSelect.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UC_FlightsNameOption.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UC_FlightsNameOption.Designer.cs">
+      <DependentUpon>UC_FlightsNameOption.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UC_Luggage.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UC_Luggage.Designer.cs">
+      <DependentUpon>UC_Luggage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UC_LuggageView.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UC_LuggageView.Designer.cs">
+      <DependentUpon>UC_LuggageView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UC_PassengerInfo.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UC_PassengerInfo.Designer.cs">
+      <DependentUpon>UC_PassengerInfo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UC_Passengers.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UC_Passengers.Designer.cs">
+      <DependentUpon>UC_Passengers.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UC_SignIn.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UC_SignIn.Designer.cs">
+      <DependentUpon>UC_SignIn.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UC_SignUP.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UC_SignUP.Designer.cs">
+      <DependentUpon>UC_SignUP.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UC_ViewAllPassengers.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UC_ViewAllPassengers.Designer.cs">
+      <DependentUpon>UC_ViewAllPassengers.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="AdminInterface.resx">
+      <DependentUpon>AdminInterface.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PassengerInterface.resx">
+      <DependentUpon>PassengerInterface.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="UC_AddressInfo.resx">
+      <DependentUpon>UC_AddressInfo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UC_adminInterface.resx">
+      <DependentUpon>UC_adminInterface.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UC_Booking.resx">
+      <DependentUpon>UC_Booking.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UC_FamilyMembers.resx">
+      <DependentUpon>UC_FamilyMembers.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UC_FeedBack.resx">
+      <DependentUpon>UC_FeedBack.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UC_FeedbackView.resx">
+      <DependentUpon>UC_FeedbackView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UC_FlightsAdd.resx">
+      <DependentUpon>UC_FlightsAdd.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UC_FlightsCRUD.resx">
+      <DependentUpon>UC_FlightsCRUD.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UC_FlightSelect.resx">
+      <DependentUpon>UC_FlightSelect.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UC_FlightsNameOption.resx">
+      <DependentUpon>UC_FlightsNameOption.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UC_Luggage.resx">
+      <DependentUpon>UC_Luggage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UC_LuggageView.resx">
+      <DependentUpon>UC_LuggageView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UC_PassengerInfo.resx">
+      <DependentUpon>UC_PassengerInfo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UC_Passengers.resx">
+      <DependentUpon>UC_Passengers.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UC_SignIn.resx">
+      <DependentUpon>UC_SignIn.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UC_SignUP.resx">
+      <DependentUpon>UC_SignUP.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UC_ViewAllPassengers.resx">
+      <DependentUpon>UC_ViewAllPassengers.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Best-Stress-buster-Gadgets.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\lovetreatment.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="pics\850px-Emirates_logo.svg.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="pics\download %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="pics\download %282%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="pics\download.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="pics\Qatar-Airways-logo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\plane.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\WhatsApp Image 2023-07-26 at 12.31.39 PM.jpeg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Admin.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\WhatsApp Image 2023-07-26 at 1.13.58 PM %281%29.jpeg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\495-4952535_create-digital-profile-icon-blue-user-profile-icon-removebg-preview %281%29.png" />
+    <Content Include="Resources\PASSENGER.png" />
+    <None Include="Resources\PASSENGER1.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
